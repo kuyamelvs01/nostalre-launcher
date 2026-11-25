@@ -223,7 +223,9 @@ nostalRE's own packages (see [client/README.md](https://github.com/si-klyde/nost
    cd nostalre-launcher
    ```
 2. Put your game files in `game-data/`, laid out like the device's game folder
-   ([game-data/README.md](game-data/README.md)).
+   ([game-data/README.md](game-data/README.md)). With no `data.grf` there, the script uses the client
+   folder already chosen in Ragnarok Offline. Quit that app first: it listens on the same login port, and
+   nostalRE cannot join its server.
 3. Run:
    ```sh
    scripts/run-nostalre.sh
