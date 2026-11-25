@@ -6,7 +6,10 @@ RATHENA="${RATHENA_DIR:-$ROOT/server}"
 BRIDGE="$ROOT/bridge"
 # the nostalRE checkout: the client/ submodule, or another one (NOSTALRE_DIR)
 CLIENT="${NOSTALRE_DIR:-$ROOT/client}"
-GAME_DATA="$ROOT/game-data"
+# Where the GRFs are. Defaults to game-data/; export GAME_DATA to use another folder.
+# scripts/run-nostalre.sh falls back to the folder Ragnarok Offline's client.json names
+# when this one has no data.grf.
+GAME_DATA="${GAME_DATA:-$ROOT/game-data}"
 
 # nostalRE speaks one packet version, 20250716 (`rathena_table::PACKETVER`), to Renewal servers: the servers are
 # built for it (docs in client/docs/packet-status-20250716.md)
